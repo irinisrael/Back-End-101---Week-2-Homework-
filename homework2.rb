@@ -42,34 +42,47 @@ class Homework
 
 	# Add a method called "shout" that takes a string as a parameter and returns it in all caps
 	def shout(shout_word)
-		return shout_string.upcase
+		return shout_word.upcase
 	end
 
 	# Add a method called "repeat_string" that takes two parameters and prints the string
 	# the number of times of the integer
 	def repeat_string(repeat_word, repeat_integer)
-		i=repeat_integer
-		i.times do |item|
-			puts repeat_word
-	end
-
-
-
-
-		i = 0
-		if (i = repeat_integer)
-			break
-		else
-			i += 1
+		repeat_integer.times do
 			puts repeat_word
 		end
 	end
 
-end
+	# Create a method (calendar) that takes two arrays as parameters
+	# The first should be names of holidays as strings
+	# The second should be dates as strings
+	# The method returns a Hash where the keys are the names from the first array and the keys
+	# are the corresponding datess from the second array
+	
+	def calendar(holiday_names, holiday_dates)
 
-#test = Homework.new
+		holidays_hash = {}
+
+		n = 0
+		m = 0
+
+		y = holiday_names.length
+
+		y.times do
+			holidays_hash[(holiday_names[n])] = holiday_dates[m]
+			n += 1
+			m += 1
+		end
+
+		return holidays_hash
+
+	end
+
+	# Used to test hash
+	array1 = ["New Year's Day", "Groundhog Day", "April Fool's Day", "Memorial Day", "Independence Day", "Labor Day", "Halloween", "Thanksgiving"]
+	array2 = ["1/1/15", "2/2/15", "4/1/15", "5/25/15", "7/4/15", "9/7/15", "10/31/15", "11/26/15"]
+	calendar(array1, array2)
 
 
-#shout("hi")
-#repeat_string("hi", 5)
+
 
