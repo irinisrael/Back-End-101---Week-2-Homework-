@@ -78,11 +78,19 @@ class Homework
 
 	end
 
-	# Used to test hash
-	array1 = ["New Year's Day", "Groundhog Day", "April Fool's Day", "Memorial Day", "Independence Day", "Labor Day", "Halloween", "Thanksgiving"]
-	array2 = ["1/1/15", "2/2/15", "4/1/15", "5/25/15", "7/4/15", "9/7/15", "10/31/15", "11/26/15"]
-	calendar(array1, array2)
+end
+
+# Create a new instance of the Homework class and call each method
+test = Homework.new
+
+puts test.shout("you talkin to me?")
+
+test.repeat_string("hi", 12)
+
+array1 = ["New Year's Day", "Groundhog Day", "April Fool's Day", "Memorial Day", "Independence Day", "Labor Day", "Halloween", "Thanksgiving"]
+array2 = ["1/1/15", "2/2/15", "4/1/15", "5/25/15", "7/4/15", "9/7/15", "10/31/15", "11/26/15"]
+puts test.calendar(array1, array2)
 
 
-
+# Questions:
 
