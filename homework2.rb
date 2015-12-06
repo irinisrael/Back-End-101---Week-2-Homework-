@@ -16,23 +16,32 @@ end
 
 # Defining a method called fizz_buzz_to and its parameter of limit
 def fizz_buzz_to(limit)
-	# From 1 up to the variable limit number of times, loop num to print each number up to
-	# num (above) through the fizzbuzz method - meaning that the modulus rules above apply
+	# From 1 up to the variable limit number of times, loop to print each number
+	# through the fizzbuzz method - meaning that the modulus rules above apply
   1.upto(limit).each do |num|
     puts fizzbuzz(num)
   end
 end
 
-# Used to test - here it prints 3 times up to the number 5
-# Result: 1, 2, Fizz
-fizzbuzz(5)
-fizz_buzz_to(3)
+# Used to test
+puts fizzbuzz(45)
+# Result: FizzBuzz
 
-# Used to test - here it prints 5 times up to the number 3
-# Result: 1, 2, Fizz, 4, Buzz
-# However it passes 3 in this example and continues up to 5 though because the upto limit is 5
-fizzbuzz(3)
+# Used to test
+puts fizzbuzz(2)
+# Result: 2
+
+# Used to test
+puts fizzbuzz(5)
+# Result: Buzz
+
+# Used to test
+fizz_buzz_to(3)
+# Result: 1, 2, Fizz
+
+# Used to test
 fizz_buzz_to(5)
+# Result: 1, 2, Fizz, 4, Buzz
 
 
 # Coding:
@@ -94,3 +103,18 @@ puts test.calendar(array1, array2)
 
 # Questions:
 
+# 1.
+
+# An instance variable is notated as @variable_name.
+# They can only be referenced within the class methods.
+# But they live on past the call of the method and can be referenced
+# by any method of the class (as opposed to local variables that are
+# local to the method).
+# They belong to one class (while class variables are shared between
+# a given class and its subclasses.)
+
+# 2. 
+
+# even? and odd? are methods of the Integer class.
+# even? returns true if the integer is an even number, false if not.
+# odd? returns true if the integer is an odd number, false if not.
